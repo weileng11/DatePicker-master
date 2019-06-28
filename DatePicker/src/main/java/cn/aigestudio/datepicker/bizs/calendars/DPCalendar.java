@@ -139,4 +139,24 @@ public abstract class DPCalendar {
     protected int getBitInt(int data, int length, int shift) {
         return (data & (((1 << length) - 1) << shift)) >> shift;
     }
+
+    /**
+     * 获取年
+     *
+     * @return
+     */
+    public  int getYear() {
+        Calendar cd = Calendar.getInstance();
+        return cd.get(Calendar.YEAR);
+    }
+
+    /**
+     * 获取月
+     *
+     * @return
+     */
+    public  int getMonth() {
+        Calendar cd = Calendar.getInstance();
+        return cd.get(Calendar.MONTH) + 1;
+    }
 }

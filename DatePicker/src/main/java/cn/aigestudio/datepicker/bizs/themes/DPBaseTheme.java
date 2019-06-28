@@ -46,7 +46,7 @@ public class DPBaseTheme extends DPTheme {
 
     @Override
     public int colorWeekend() {
-        return 0xFFFF6D6A;
+        return 0xFF303F9F;
     } //周六日文字颜色
 
     @Override

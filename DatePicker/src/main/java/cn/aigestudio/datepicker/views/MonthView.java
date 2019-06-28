@@ -16,6 +16,7 @@ import android.graphics.drawable.shapes.OvalShape;
 import android.os.Build;
 import android.os.Parcelable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
@@ -350,6 +351,7 @@ public class MonthView extends View {
                     centerYear + "-" + centerMonth + "-" + info.strG);
         }
         if (info.isToday && isTodayDisplay) {
+            Log.i("isToday","--"+info.isToday+"---"+isTodayDisplay);
             drawBGToday(canvas, rect);
         } else {
             if (isHolidayDisplay) drawBGHoliday(canvas, rect, info.isHoliday);

@@ -175,11 +175,11 @@ public class MainActivity extends Activity {
                 final AlertDialog dialog = new AlertDialog.Builder(MainActivity.this).create();
                 dialog.show();
                 DatePicker picker = new DatePicker(MainActivity.this);
-                picker.setDate(2019, 6,5);
+                picker.setDate(2019, 6,15);
                 picker.setMode(DPMode.SINGLE);
 //                picker.setDeferredDisplay(true);
-//                picker.setHolidayDisplay(true);
-                picker.setTodayDisplay(true);
+//                picker.setHolidayDisplay(false);
+//                picker.setTodayDisplay(true);
                 picker.setOnDatePickedListener(new DatePicker.OnDatePickedListener() {
                     @Override
                     public void onDatePicked(String date) {

@@ -1,6 +1,7 @@
 package cn.aigestudio.datepicker.bizs.calendars;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -150,7 +151,9 @@ public final class DPCManager {
             dataOfYear.put(month, dataOfMonth);
             return dataOfMonth;
         }
-        if (null == dataOfYear) dataOfYear = new HashMap<>();
+        if (null == dataOfYear) {
+            dataOfYear = new HashMap<>();
+        }
         DPInfo[][] dataOfMonth = buildDPInfo(year, month,day);
         dataOfYear.put((month), dataOfMonth);
         DATE_CACHE.put(year, dataOfYear);
@@ -197,7 +200,14 @@ public final class DPCManager {
                 if (!TextUtils.isEmpty(tmp.strG) && strHoliday.contains(tmp.strG))
                     tmp.isHoliday = true;
                 if (!TextUtils.isEmpty(tmp.strG)) {
-                    tmp.isToday = c.isToday(year, month, day);
+                    if(tmp.strG.equals(String.valueOf(day))){
+                        //获取当前年月的日，只显示当前月的天数
+                        if(c.getYear()==year&&c.getMonth()==month){
+                            tmp.isToday=true;
+                        }
+                    }
+//                    tmp.isToday = c.isToday(year, month, day);
+                    Log.i("isToday","-day-"+day+"---"+ tmp.isToday+tmp.strG);
                 }
 //                c.isToday(year, month, Integer.valueOf(tmp.strG));
                 if (strWeekend.contains(tmp.strG)) tmp.isWeekend = true;
