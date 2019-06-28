@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9fd657</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccentAlpha">#801572fc</color>
+
+	<!--main背景颜色 #ff6f61  #ff6f61-->
+	<color name="bg_main_top">#ff6d6a</color>
+	<color name="bg_launch">#ff6d6a</color>
+	
+</resources>
